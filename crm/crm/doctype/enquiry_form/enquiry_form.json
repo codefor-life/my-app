@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ENQ-{#####}",
+ "creation": "2024-07-01 14:20:52.601670",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_6obi",
+  "amended_from",
+  "contact_id",
+  "full_name",
+  "user_id",
+  "column_break_gsjv",
+  "gender",
+  "address",
+  "company_name",
+  "enquiry_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_6obi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Enquiry Form",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "contact_id",
+   "fieldtype": "Link",
+   "label": "Contact ID",
+   "options": "Contact"
+  },
+  {
+   "fetch_from": "contact_id.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name"
+  },
+  {
+   "fetch_from": "contact_id.user",
+   "fieldname": "user_id",
+   "fieldtype": "Data",
+   "label": "User ID"
+  },
+  {
+   "fieldname": "column_break_gsjv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "contact_id.gender",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fetch_from": "contact_id.address",
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fetch_from": "contact_id.company_name",
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "enquiry_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Enquiry Status",
+   "options": "\nDeclined\nApproved\nProceed"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-02 08:24:44.560835",
+ "modified_by": "Administrator",
+ "module": "crm",
+ "name": "Enquiry Form",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "Declined"
+  },
+  {
+   "color": "Yellow",
+   "title": "Proceed"
+  }
+ ]
+}
