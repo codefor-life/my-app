@@ -28,7 +28,14 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = {"Contact" : "public/js/contact.js"}
+# In hooks.py
+doctype_js = {
+    "Contact": "public/js/contact.js",
+    # "Estimation": "public/js/estimation.js"  # Add this line for the Estimation doctype
+}
+
+# In hooks.py
+
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}

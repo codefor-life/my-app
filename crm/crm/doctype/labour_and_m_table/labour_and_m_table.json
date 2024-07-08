@@ -8,7 +8,9 @@
  "field_order": [
   "type",
   "item",
-  "quantity"
+  "quantity",
+  "cost",
+  "amount"
  ],
  "fields": [
   {
@@ -30,12 +32,22 @@
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Quantity"
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Float",
+   "label": "Cost"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "label": "Amount"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-07-02 13:58:12.492509",
+ "modified": "2024-07-06 12:29:04.844637",
  "modified_by": "Administrator",
  "module": "crm",
  "name": "Labour And M Table",

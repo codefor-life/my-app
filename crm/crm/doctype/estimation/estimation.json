@@ -7,7 +7,18 @@
  "field_order": [
   "project_name",
   "date",
-  "table_hpqs"
+  "table_hpqs",
+  "section_break_nmeo",
+  "overhead_percentage",
+  "column_break_tnzt",
+  "profit_and_margin",
+  "section_break_rpyc",
+  "column_break_npgc",
+  "est_og_charges",
+  "section_break_bvyc",
+  "total_material_cost",
+  "column_break_nwiq",
+  "total_labour_cost"
  ],
  "fields": [
   {
@@ -24,11 +35,64 @@
    "fieldname": "table_hpqs",
    "fieldtype": "Table",
    "options": "Item Estimation Table"
+  },
+  {
+   "fieldname": "est_og_charges",
+   "fieldtype": "Table",
+   "options": "Estimation Other Charges T",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_nmeo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "overhead_percentage",
+   "fieldtype": "Float",
+   "label": "Overhead Percentage"
+  },
+  {
+   "fieldname": "column_break_tnzt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "profit_and_margin",
+   "fieldtype": "Float",
+   "label": "Profit And Margin"
+  },
+  {
+   "fieldname": "section_break_rpyc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_material_cost",
+   "fieldtype": "Float",
+   "label": "Total Material Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_labour_cost",
+   "fieldtype": "Float",
+   "label": "Total Labour Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_bvyc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_nwiq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_npgc",
+   "fieldtype": "Column Break",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-02 09:29:13.978284",
+ "modified": "2024-07-08 08:00:00.026296",
  "modified_by": "Administrator",
  "module": "crm",
  "name": "Estimation",

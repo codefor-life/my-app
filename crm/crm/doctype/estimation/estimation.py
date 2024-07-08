@@ -3,6 +3,8 @@
 
 import frappe
 from frappe.model.document import Document
+from crm.crm.whitelist_methods.estimation_and_labour import calculate_cost_for_each_table_row
+from crm.crm.whitelist_methods.estimation_and_labour import update_total_labour_and_material_cost
 
 
 class Estimation(Document):
@@ -31,9 +33,18 @@ class Estimation(Document):
 		return {'estimation_name': labour_and_material.estimation}
 
 	def validate(doc):
-
 		for i in range(0,len(doc.table_hpqs)):
-			doc.table_hpqs[i].area = doc.table_hpqs[i].width_meter * doc.table_hpqs[i].height_meter
-			doc.table_hpqs[i].perimeter = 2 * (doc.table_hpqs[i].width_meter + doc.table_hpqs[i].height_meter)
+			row = doc.table_hpqs[i]
+			if(doc.table_hpqs[i].width_meter and doc.table_hpqs[i].width_meter > 0 and doc.table_hpqs[i].height_meter and doc.table_hpqs[i].height_meter > 0 and doc.table_hpqs[i].quantity and doc.table_hpqs[i].quantity>0):
+				doc.table_hpqs[i].area = doc.table_hpqs[i].width_meter * doc.table_hpqs[i].height_meter * doc.table_hpqs[i].quantity
+				doc.table_hpqs[i].perimeter = 2 * (doc.table_hpqs[i].width_meter + doc.table_hpqs[i].height_meter) *  doc.table_hpqs[i].quantity
+
+			         
+
+		
+		
+
+	
+
 
 
